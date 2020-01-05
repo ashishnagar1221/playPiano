@@ -1,0 +1,248 @@
+<html>
+<head>
+	<style>
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+	body {
+		  background-color: f1f1f6;
+		  margin: 0;
+		  min-height: 100vh;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+	}
+	.piano {
+		display: flex;
+	}
+		.key {
+		  height: calc(var(--width) * 4);
+		  width: var(--width);
+		}
+		.white {
+		  --width: 100px;
+		  background-color: white;
+		  border: 1px solid #333;
+		}
+		.active, .white:hover {
+			background-color: ebe6e6;
+			color: white;
+		}
+		.black {
+		  --width: 60px;
+		  background-color: black;
+		  margin-left: calc(var(--width) / -2);
+		  margin-right: calc(var(--width) / -2);
+		  z-index: 2;
+		}
+		.active, .black:hover {
+			background-color: #666;
+			color: white;
+		}
+		.btn{
+			margin: 20px;
+		}
+		.btn-start{
+			height: 100px;
+		}
+		.btn {
+		  float: left;
+		  background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 20px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		}
+
+		.btn1 {
+			border-radius: 50%;
+			float: left;
+		}
+		.btn2 {
+			border-radius: 50%;
+			float: left;
+		}
+		.btn3 {
+			border-radius: 50%;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="piano">
+		<button class="key white" onclick="playC4()";></button>
+		<button  class="key black" onclick="playDb4()";></button>
+		<button  class="key white" onclick="playD4()";></button>
+		<button  class="key black" onclick="playEb4()";></button>
+		<button  class="key white" onclick="playE4()";></button>
+		<button  class="key white" onclick="playF4()";></button>
+		<button  class="key black" onclick="playGb4()";></button>
+		<button  class="key white" onclick="playG4()";></button>
+		<button  class="key black" onclick="playAb4()";></button>
+		<button  class="key white" onclick="playA4()";></button>
+		<button  class="key black" onclick="playBb4()";></button>
+		<button  class="key white" onclick="playB4()";></button>
+		<button  class="key white" onclick="playC5()";></button>
+		<button  class="key black" onclick="playDb5()";></button>
+		<button  class="key white" onclick="playD5()";></button>
+		<button  class="key black" onclick="playEb5()";></button>
+		<button  class="key white" onclick="playE5()";></button>
+	</div>
+		<button class="btn btn1" onclick="startrecord()";>Start</button>
+		<button class="btn btn2" onclick="stoprecord()";>Stop</button>
+		<button class="btn btn3" onclick="playrecord()";>Play</button>
+	
+	<script>
+			function startrecord(){
+			/*
+			window.addEventListener('keydown', (e) => {
+				alert(e.key);
+			}
+			*/
+			/*	document.addEventListener('DOMContentLoaded', () => {
+				'use strict';
+				let buffer = [];
+				document.addEventListener('keydown', event => {
+				const charList = 'q2w3er5t6y7ui9o0p';
+				const key = event.key.toLowerCase();
+				// we are only interested in alphanumeric keys
+				if (charList.indexOf(key) === -1) return;
+				buffer.push(key);
+				console.log(buffer);
+				alert(buffer);
+					});
+				});
+				*/
+			}
+			function playC4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/A4.mp3");
+				audio.play();
+			}
+			function playDb4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/Db4.mp3");
+				audio.play();
+			}
+			function playD4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/D4.mp3");
+				audio.play();
+			}
+			
+			function playEb4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/Eb4.mp3");
+				audio.play();
+			}
+			function playE4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/E4.mp3");
+				audio.play();
+			}
+			function playF4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/F4.mp3");
+				audio.play();
+			}
+			
+			function playGb4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/Gb4.mp3");
+				audio.play();
+			}
+			function playG4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/G4.mp3");
+				audio.play();
+			}
+			function playAb4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/Ab4.mp3");
+				audio.play();
+			}
+			function playA4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/A4.mp3");
+				audio.play();
+			}
+			function playBb4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/Bb4.mp3");
+				audio.play();
+			}
+			function playB4()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/B4.mp3");
+				audio.play();
+			}
+			
+			function playC5()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/C5.mp3");
+				audio.play();
+			}
+			function playDb5()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/Db5.mp3");
+				audio.play();
+			}
+			function playD5()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/D5.mp3");
+				audio.play();
+			}
+			function playEb5()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/Eb5.mp3");
+				audio.play();
+			}
+				function playE5()
+			{	
+				var audio=new Audio("https://raw.githubusercontent.com/ashishnagar1221/playPiano/master/E5.mp3");
+				audio.play();
+			}
+			window.addEventListener("keydown", ({ keyCode }) => {
+			// Press Q
+			if (keyCode === 81) return playC4();
+			// Press 2
+			if (keyCode === 50) return playDb4();
+			// Press W
+			if (keyCode === 87) return playD4();
+			// Press 3
+			if (keyCode === 51) return playEb4();
+			// Press E
+			if (keyCode === 69) return playE4();
+			// Press R
+			if (keyCode === 82) return playF4();
+			// Press 5
+			if (keyCode === 53) return playGb4();
+			// Press T
+			if (keyCode === 84) return playG4();
+			// Press 6
+			if (keyCode === 54) return playAb4();
+			// Press Y
+			if (keyCode === 89) return playA4();
+			// Press 7
+			if (keyCode === 55) return playBb4();
+			// Press U
+			if (keyCode === 85) return playB4();
+			// Press I
+			if (keyCode === 73) return playC5();
+			// Press 9
+			if (keyCode === 57) return playDb5();
+			// Press O
+			if (keyCode === 79) return playD5();
+			// Press 0 
+			if (keyCode === 48) return playEb5();
+			// Press P
+			if (keyCode === 80) return playE5();
+		});
+	</script>
+</body>
+</html>
